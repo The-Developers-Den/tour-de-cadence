@@ -1,27 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@font-face {
+  font-family: "Aber-Bold";
+  src: url("/fonts/Aber-Mono-Bold.otf");
+}
+@font-face {
+  font-family: "Aber-Reg";
+  src: url("/fonts/Aber-Mono-Regular.otf");
+}
+@font-face {
+  font-family: "Aber-Thin";
+  src: url("/fonts/Aber-Mono-Light.otf");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
+  background: #020614;
+  color: white;
+  overflow-x: hidden;
 }

@@ -13,6 +13,12 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    fontFamily: {
+      raleway: ["Raleway"],
+      aber_thin: ["Aber-Thin"],
+      aber: ["Aber-Reg"],
+      aber_bold: ["Aber-Bold"],
+    },
   },
   plugins: [],
 };
