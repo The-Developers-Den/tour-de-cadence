@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Rewards from "@/components/Rewards";
 import Image from "next/image";
@@ -23,6 +24,7 @@ export default function Home() {
   ];
   return (
     <main>
+      <Header />
       <Hero />
       <section className="w-screen min-h-screen flex justify-center  z-20 relative">
         <section className="absolute w-full h-full bg-[#020614] opacity-80 -z-20  " />
