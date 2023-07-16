@@ -41,7 +41,7 @@ const Header = () => {
   ];
   return (
     <nav
-      className={`w-screen px-5 md:px-7 py-3 flex fixed top-5 z-10 font-aber justify-between ${show} transition-transform duration-300`}
+      className={`w-screen px-5 md:px-7 py-3 flex fixed top-5 z-50 font-aber justify-between ${show} transition-transform duration-300`}
     >
       <section className="flex">
         {headers.map((link) => (

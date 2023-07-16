@@ -10,9 +10,9 @@ const Hero = () => {
       transitionSpeed={900}
       tiltMaxAngleY={3}
       tiltMaxAngleX={3}
-      className="w-screen h-screen flex overflow-hidden"
+      className={` ${styles.outer} w-screen min-h-screen flex overflow-hidden`}
     >
-      <section className="w-screen h-screen flex ">
+      <section className="w-screen min-h-screen flex ">
         <Image
           src={"/stars.png"}
           alt="stars-bg"
@@ -23,7 +23,7 @@ const Hero = () => {
         <section
           className={` ${styles.cont} flex flex-col justify-center items-center font-aber_bold text-white w-[80vw] mx-auto mt-10`}
         >
-          <h1 className="text-8xl font-black uppercase">Learn Cadence</h1>
+          <h1 className="text-8xl font-black uppercase">Tour dé Cadence</h1>
           <h2 className="font-raleway my-2 text-lg w-[60%] text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quae
             illo facilis cupiditate, doloribus earum dicta perspiciatis
