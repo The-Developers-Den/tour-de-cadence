@@ -35,3 +35,14 @@ body {
   color: white;
   overflow-x: hidden;
 }
+.added {
+  background-color: #00ff51;
+}
+
+.removed {
+  background-color: #ff0000;
+}
+
+.unchanged {
+  background-color: transparent;
+}
