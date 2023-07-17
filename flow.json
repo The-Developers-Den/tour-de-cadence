@@ -1,0 +1,29 @@
+{
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "46345ac4b490a5b79b136673230052c9e49d5bbb28c9a207dc5f1b0c9df67dde"
+    },
+    "test": {
+      "address": "1c97bc77c5d57dfe",
+      "key": {
+        "type": "file",
+        "location": "test.pkey"
+      }
+    }
+  },
+  "contracts": {
+    "TourDeCadence": "./contracts/TourDeCadence.cdc"
+  },
+  "deployments": {
+    "testnet": {
+      "test": ["TourDeCadence"]
+    }
+  }
+}
