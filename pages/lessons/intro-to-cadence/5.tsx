@@ -7,11 +7,25 @@ import LessonQuiz from "@/components/LessonQuiz";
 
 const syntax = () => {
   const [code, setCode] = useState(`
-  // Observe how to declare different variables
+  // Guess the output
+  //
+  //q1
+  let a: UInt8 = 200
+  let b: UInt8 = 100
+  let result = a.saturatingAdd(b)
   
+  //q2
+  let max = UInt8.max
+
+  //q3
+  let fix =  -9223372036854775807
+  fix.toBigEndianBytes()
   `);
   const ans = `
-  // no quiz for this chater
+  //Ans
+  // q1 - result is 255, the maximum value of the type UInt8
+  // q2 - max is 255, the maximum value of the type UInt8
+  // q3 - [128, 0, 0, 0, 0, 0, 0, 1]
   `;
 
   const handleChange = (_editor: unknown, data: unknown, value: string) => {
@@ -88,173 +102,66 @@ const syntax = () => {
           <LessonHeading links={links} />
           <section className="font-raleway leading-8">
             <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              Types of data strucutres
+              Integers
             </h2>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              1. Boolean
-            </h3>
-            <h3>Boolean has two values true and false with the type Bool</h3>
-            <h3>Constants are declared using the let keyword.</h3>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              2. Numeric Literals
-            </h3>
-            <h3>
-              Numbers can be written in various bases. Numbers are assumed to be
-              decimal by default. Non-decimal literals have a specific prefix.
-            </h3>
-            <h3>Underscores are allowed for all numeral systems.</h3>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              2.1 Decimals
-            </h3>
-            <h3>prefix none </h3>
-            <h3>
-              Decimal numbers may contain underscores (_) to logically separate
-              components.
-            </h3>
-            <Code>
-              <h3>{`1234567890  // is 1234567890`}</h3>
-              <h3>{`// A decimal number with leading zeros. Not an octal number!`}</h3>
-              <h3>{`00123 // is 123`}</h3>
-            </Code>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              2.2 Binary
-            </h3>
-            <h3>prefix 0b only 0,1 allowed </h3>
-            <Code>
-              <h3>{`0b101010  // is 42`}</h3>
-            </Code>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              2.3 Octal
-            </h3>
-            <h3>prefix 0o only 0-7 allowed </h3>
-            <Code>
-              <h3>{`0o12345670  // is 2739128`}</h3>
-            </Code>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              2.4 Hexadecimal
-            </h3>
-            <h3>prefix 0x only 0-9 and a-f allowed </h3>
-            <Code>
-              <h3>{`0x1234567890ABCabc  // is 1311768467294898876`}</h3>
-            </Code>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              2.5 Integers
-            </h3>
             <h3>
               Integers are numbers without a fractional part. They are either
               signed (positive, zero, or negative) or unsigned (positive or
               zero).
             </h3>
-            <Code>
-              <h3>{`let smallNumber: UInt8 = 10`}</h3>
-            </Code>
-            <h3>We will talk more about integers in the coming chapter</h3>
+            <h3>
+              Signed integer types which check for overflow and underflow have
+              an Int prefix and can represent values in the following ranges:
+            </h3>
+            <h3>Int8: -2^7 through 2^7 - 1</h3>
+            <h3>Int16: -2^15 through 2^15 - 1 </h3>
+            <h3>Int32: -2^31 through 2^31 - 1 </h3>
+            <h3>Int64: -2^63 through 2^63 - 1 </h3>
+            <h3>Int128: -2^127 through 2^127 - 1 </h3>
+            <h3>Int256: -2^255 through 2^255 - 1</h3>
             <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              2.6 Fixed-Point Numbers
+              2. Numeric Literals
             </h3>
             <h3>
-              Fixed-point numbers are useful for representing fractional values.
-              They have a fixed number of digits after decimal point.
-            </h3>
-            <h3>
-              They are essentially integers which are scaled by a factor. For
-              example, the value 1.23 can be represented as 1230 with a scaling
-              factor of 1/1000. The scaling factor is the same for all values of
-              the same type and stays the same during calculations.
-            </h3>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              2.7 Floating-Point Numbers
-            </h3>
-            <h3>There is no support for floating point numbers.</h3>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              3. Addressess
-            </h3>
-            <h3>
-              The type Address represents an address. Addresses are unsigned
-              integers with a size of 64 bits (8 bytes). Hexadecimal integer
-              literals can be used to create address values.
-            </h3>
-            <h3>Address can also be created using a byte array or string.</h3>
-            <Code>
-              <h3>{`let someAddress: Address = 0x436164656E636521`}</h3>
-              <h3>{`let addressFromString: Address? = Address.fromString("0x436164656E636521")`}</h3>
-            </Code>
-
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              4. Strings
-            </h3>
-            <h3>
-              Strings are collections of characters. Strings have the type
-              String, and characters have the type Character. Strings can be
-              used to work with text in a Unicode-compliant way. Strings are
-              immutable.
-            </h3>
-            <h3>
-              String and character literals are enclosed in double quotation
-              marks
-            </h3>
-            <h3>
-              The type Character represents a single, human-readable character.
-              Characters are extended grapheme clusters, which consist of one or
-              more Unicode scalars.
-            </h3>
-            <Code>
-              <h3>{`let someString = "Hello, world!"`}</h3>
-            </Code>
-
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              5. Arrays
-            </h3>
-            <h3>
-              Arrays are mutable, ordered collections of values. Arrays may
-              contain a value multiple times. Array literals start with an
-              opening square bracket [ and end with a closing square bracket ].
-            </h3>
-            <h3>We will talk more about arrays in the coming chapter</h3>
-            <Code>
-              <h3>{`[1, 2, 3]`}</h3>
-            </Code>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              6. Dictionary
-            </h3>
-            <h3>
-              Dictionaries are mutable, unordered collections of key-value
-              associations. Dictionaries may contain a key only once and may
-              contain a value multiple times. Dictionary literals start with an
-              opening brace {`{`} and end with a closing brace {"}"} . Keys are
-              separated from values by a colon, and key-value associations are
-              separated by commas.
-            </h3>
-            <h3>We will talk more about dictinary in the coming chapter</h3>
-            <Code>
-              <h3>{`let booleans = {`}</h3>
-              <h3>{`   1: true,`}</h3>
-              <h3>{`   0: false`}</h3>
-              <h3>{`}`}</h3>
-            </Code>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              8.Never
-            </h3>
-            <h3>
-              Never is the bottom type, i.e., it is a subtype of all types.
-              There is no value that has type Never. Never can be used as the
-              return type for functions that never return normally. For example,
-              it is the return type of the function panic.
-            </h3>
-            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              Minimum and maximum values
-            </h3>
-            <h3>
-              The minimum and maximum values for all integer and fixed-point
-              number types are available through the fields min and max.
+              Unsigned integer types which check for overflow and underflow have
+              a UInt prefix and can represent values in the following ranges:
             </h3>
 
+            <h3>UInt8: 0 through 2^8 - 1 </h3>
+            <h3>UInt16: 0 through 2^16 - 1 </h3>
+            <h3>UInt32: 0 through 2^32 - 1 </h3>
+            <h3>UInt64: 0 through 2^64 - 1 </h3>
+            <h3>UInt128: 0 through 2^128 - 1</h3>
+            <h3>UInt256: 0 through 2^256 - 1</h3>
+            <h3>
+              Unsigned integer types which do not check for overflow and
+              underflow, i.e. wrap around, have the Word prefix and can
+              represent values in the following ranges:
+            </h3>
+
+            <h3>Word8: 0 through 2^8 - 1 </h3>
+            <h3>Word16: 0 through 2^16 - 1 </h3>
+            <h3>Word32: 0 through 2^32 - 1 </h3>
+            <h3>Word64: 0 through 2^64 - 1 </h3>
+
+            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
+              Integer Functions
+            </h3>
+            <h3>Integers have multiple built-in functions you can use.</h3>
             <Code>
-              <h3>{`let max = UInt8.max`}</h3>
-              <h3>{`// max is 255, the maximum value of the type UInt8`}</h3>
-              <h3>{`let max = UInt8.min`}</h3>
-              <h3>{`// min is 0, the maximum value of the type UInt8`}</h3>
+              <h3>{`let largeNumber = 1234567890`}</h3>
+              <h3>{`answer.toString()  // is "1234567890"`}</h3>
+              <h3>{`largeNumber.toBigEndianBytes()  // is [73, 150, 2, 210]`}</h3>
+              <h3>{`let negTwenty: Int? = Int.fromString("-20") // ok`}</h3>
             </Code>
+            <h3 className="text-xl font-bold font-aber_bold my-2 mt-3">
+              Saturation Arithmetic
+            </h3>
+            <h3>
+              Integers and fixed-point numbers support saturation arithmetic:
+              Arithmetic operations, such as addition or multiplications, are
+              saturating at the numeric bounds instead of overflowing.
+            </h3>
           </section>
         </section>
 
