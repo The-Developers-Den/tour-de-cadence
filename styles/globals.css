@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Space+Mono&display=swap");
 @font-face {
   font-family: "Aber-Bold";
   src: url("/fonts/Aber-Mono-Bold.otf");
@@ -10,6 +10,10 @@
 @font-face {
   font-family: "Aber-Thin";
   src: url("/fonts/Aber-Mono-Light.otf");
+}
+@font-face {
+  font-family: "Cascadia";
+  src: url("/fonts/Cascadia.ttf");
 }
 @tailwind base;
 @tailwind components;

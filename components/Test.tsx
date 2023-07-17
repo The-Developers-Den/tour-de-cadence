@@ -9,7 +9,6 @@ const CodeDifference = ({
   answerCode: string;
 }) => {
   const differences = diffChars(userCode, answerCode);
-  console.log(differences);
 
   const renderDifferences = differences.map((part, index) => {
     const style = part.added ? "added" : part.removed ? "removed" : "unchanged";

@@ -18,6 +18,8 @@ module.exports = {
       aber_thin: ["Aber-Thin"],
       aber: ["Aber-Reg"],
       aber_bold: ["Aber-Bold"],
+      mono: ["Space Mono"],
+      code: ["Cascadia"],
     },
   },
   plugins: [],

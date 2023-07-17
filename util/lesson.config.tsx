@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer";
-import LessonHeader from "@/components/LessonHeader";
 import React from "react";
 
 type LessonsProps = {
@@ -8,11 +7,10 @@ type LessonsProps = {
 
 const Lessons = ({ children }: LessonsProps) => {
   return (
-    <>
-      <LessonHeader />
+    <div className="h-screen overflow-hidden">
       {children}
       <Footer showStars={false} />
-    </>
+    </div>
   );
 };
 
