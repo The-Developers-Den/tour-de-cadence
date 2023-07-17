@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Tilt from "react-parallax-tilt";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -24,15 +25,18 @@ const Hero = () => {
           className={` ${styles.cont} flex flex-col justify-center items-center font-aber_bold text-white w-[80vw] mx-auto mt-10`}
         >
           <h1 className="text-8xl font-black uppercase">Tour dé Cadence</h1>
-          <h2 className="font-raleway my-2 text-lg w-[60%] text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quae
-            illo facilis cupiditate, doloribus earum dicta perspiciatis
-            quisquam, et fugiat provident exercitationem necessitatibus,
-            repellat quas.
+          <h2 className="font-raleway my-2 mb-4 text-lg w-[65%] text-center">
+            Welcome to Tour Dé Cadence, where you&apos;ll master the art of
+            Cadence - the language that sets the tempo for cutting-edge
+            programming! Let us guide your coding journey with flair and
+            finesse, turning you into a symphony of innovation.
           </h2>
-          <button className="outline-none text-black bg-white px-5 py-3 font-black text-lg my-3 transition-transform duration-300 hover:scale-95 cursor-pointer">
+          <Link
+            href={"/courses"}
+            className="outline-none text-black bg-white px-5 py-3 font-black text-lg my-3 transition-transform duration-300 hover:scale-95 cursor-pointer"
+          >
             Get Started
-          </button>
+          </Link>
         </section>
         <Image
           src={"/G-top.png"}

@@ -6,7 +6,10 @@ type FooterProps = {
 };
 const Footer = ({ showStars }: FooterProps) => {
   return (
-    <section className=" relative w-screen px-5 md:px-7 text-center py-4 font-aber flex justify-between text-white/[0.8]">
+    <section
+      className=" relative w-screen px-5 md:px-7 text-center py-4 font-aber flex justify-between text-white/[0.8]"
+      id="footer"
+    >
       <h2 className="mx-2 z-10">
         Copyright © Tour de Credence - All rights reserved.
       </h2>

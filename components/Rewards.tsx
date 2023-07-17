@@ -18,7 +18,10 @@ const Rewards = () => {
         height={1024}
         className="w-screen h-full absolute top-0 -z-10 "
       />
-      <h1 className="text-6xl font-black uppercase font-aber_bold text-center">
+      <h1
+        className="text-6xl font-black uppercase font-aber_bold text-center"
+        id="about"
+      >
         Embrace the Tour
       </h1>
       <section
@@ -29,10 +32,10 @@ const Rewards = () => {
             <h2 className="text-3xl">Interactive Coding Tracks</h2>
 
             <h2 className="font-raleway text-lg mt-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quae
-              illo facilis cupiditate, doloribus earum dicta perspiciatis
-              quisquam, et fugiat provident exercitationem necessitatibus,
-              repellat quas.
+              Ignite your coding journey with Interactive Coding Tracks!
+              Engaging projects, quizzes, and a vibrant community await. Join
+              now and unlock your coding potential. Let&apos;s level up
+              together!
             </h2>
           </section>
 
@@ -54,7 +57,7 @@ const Rewards = () => {
         <div className="flex justify-between">
           <div className="relative basis-[45%]">
             <Image
-              src={"/code-3.png"}
+              src={"/nft-3.jpg"}
               alt="code"
               width={500}
               height={500}

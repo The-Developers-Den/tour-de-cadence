@@ -27,12 +27,12 @@ const Header = () => {
 
   const headers: { title: string; link: string }[] = [
     {
-      title: "Speakers",
-      link: "#speakers",
+      title: "Why Cadence",
+      link: "#cadence",
     },
     {
-      title: "Sponsors",
-      link: "#sponsors",
+      title: "About Us",
+      link: "#about",
     },
     {
       title: "Contact Us",
@@ -50,9 +50,12 @@ const Header = () => {
           </Link>
         ))}
       </section>
-      <button className="uppercase outmine-none border-white/[0.8] border px-5 py-3 transition-transform duration-300 hover:scale-95 cursor-pointer">
+      <Link
+        href={"/courses"}
+        className="uppercase outmine-none border-white/[0.8] border px-5 py-3 transition-transform duration-300 hover:scale-95 cursor-pointer"
+      >
         Start exploring
-      </button>
+      </Link>
     </nav>
   );
 };

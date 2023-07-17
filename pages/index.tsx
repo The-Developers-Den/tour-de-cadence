@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Rewards from "@/components/Rewards";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const reasons: { title: string; description: string }[] = [
@@ -35,7 +36,7 @@ export default function Home() {
           height={1024}
           className="w-screen h-full absolute top-0 -z-10 opacity-80 "
         />
-        <div className="mt-14 w-full pb-20 pt-5">
+        <div className="mt-14 w-full pb-20 pt-5" id="cadence">
           <h1 className="font-aber_bold font-black mb-10 text-6xl text-center">
             Why Cadence?
           </h1>
@@ -63,17 +64,20 @@ export default function Home() {
           className="w-screen h-full absolute top-0 -z-10 opacity-80 "
         />
         <div className="w-full py-20 ">
-          <h1 className="font-aber_bold font-black mb-10 text-6xl text-center">
+          <h1 className="font-aber_bold font-black mb-5 text-6xl text-center">
             Get started now!
           </h1>
-          <h2 className="w-[70%] mx-auto font-raleway">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Dignissimos, unde nemo? Illum rerum sint perspiciatis, harum vitae
-            voluptatibus assumenda optio?
+          <h2 className="w-[70%] mx-auto font-raleway my-5">
+            What are you waiting for? Dive into the world of programming
+            brilliance with Interactive Coding Tracks and master Cadence like a
+            pro! Join now and let the coding adventure begin!
           </h2>
-          <button className="outline-none text-black bg-white px-5 py-3 font-black text-lg mt-5 transition-transform duration-300 hover:scale-95 cursor-pointer font-aber_bold">
+          <Link
+            href={"/courses"}
+            className="outline-none text-black bg-white px-5 py-3 font-black text-lg mt-7 transition-transform duration-300 hover:scale-95 cursor-pointer font-aber_bold"
+          >
             Learn Cadence
-          </button>
+          </Link>
         </div>
         <Image
           src={"/G-b.png"}
