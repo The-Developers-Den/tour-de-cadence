@@ -22,11 +22,11 @@ const courses = () => {
           info: "Expressions",
         },
       ],
-      image: "/i-4.png",
-      link: "/courses/html",
+      image: "/blockchain.png",
+      link: "/lessons/intro-to-cadence/1",
     },
     {
-      title: "Intro To Cadence",
+      title: "Cadence OOP Mastery",
       description: [
         {
           info: "Scope of Cadence",
@@ -38,11 +38,11 @@ const courses = () => {
           info: "Expressions",
         },
       ],
-      image: "/i-4.png",
-      link: "/courses/html",
+      image: "/computer.png",
+      link: "/courses",
     },
     {
-      title: "Intro To Cadence",
+      title: "Cadence: Smart Contract Wizardry",
       description: [
         {
           info: "Scope of Cadence",
@@ -54,11 +54,18 @@ const courses = () => {
           info: "Expressions",
         },
       ],
-      image: "/i-4.png",
-      link: "/courses/html",
+      image: "/link.png",
+      link: "/courses",
     },
+  ];
+  const projects: {
+    title: string;
+    description: { info: string }[];
+    image: string;
+    link: string;
+  }[] = [
     {
-      title: "Intro To Cadence",
+      title: "Hello World",
       description: [
         {
           info: "Scope of Cadence",
@@ -70,8 +77,40 @@ const courses = () => {
           info: "Expressions",
         },
       ],
-      image: "/i-4.png",
-      link: "/courses/html",
+      image: "/hello-world.png",
+      link: "/courses",
+    },
+    {
+      title: "NFT Marketplace",
+      description: [
+        {
+          info: "Scope of Cadence",
+        },
+        {
+          info: "Variables",
+        },
+        {
+          info: "Expressions",
+        },
+      ],
+      image: "/card.png",
+      link: "/courses",
+    },
+    {
+      title: "Voting Contract",
+      description: [
+        {
+          info: "Scope of Cadence",
+        },
+        {
+          info: "Variables",
+        },
+        {
+          info: "Expressions",
+        },
+      ],
+      image: "/ballot.png",
+      link: "/courses",
     },
   ];
   return (
@@ -87,10 +126,23 @@ const courses = () => {
               link={course.link}
               title={course.title}
               key={course.title}
+              btnText={"Start"}
             />
           ))}
         </section>
         <h2 className="text-4xl font-aber_bold my-2">Projects</h2>
+        <section className="grid grid-cols-4 gap-4 justify-around my-10 py-5">
+          {projects.map((course) => (
+            <CourseCard
+              description={course.description}
+              image={course.image}
+              link={course.link}
+              title={course.title}
+              key={course.title}
+              btnText={"Coming Soon"}
+            />
+          ))}
+        </section>
       </section>
       <Image
         src={"/stars.png"}

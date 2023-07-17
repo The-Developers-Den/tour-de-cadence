@@ -6,9 +6,16 @@ type CourseCardProps = {
   description: { info: string }[];
   image: string;
   link: string;
+  btnText: string;
 };
 
-const CourseCard = ({ title, description, image, link }: CourseCardProps) => {
+const CourseCard = ({
+  title,
+  description,
+  image,
+  link,
+  btnText,
+}: CourseCardProps) => {
   return (
     <div className="group bg-[url(/noise.png)] relative rounded-xl z-20 w-[20vw] min-h-[40vh] hover:scale-95 transition-transform duration-300 border cursor-pointer">
       <section className="bg-white rounded-xl w-full h-full absolute -bottom-2 -right-2 -z-10 group-hover:-bottom-1 group-hover:-right-1 transition-transform duration-700" />
@@ -19,7 +26,7 @@ const CourseCard = ({ title, description, image, link }: CourseCardProps) => {
           alt="icon"
           width={500}
           height={500}
-          className="bg-white w-20 rounded-2xl  mx-auto text-red-200"
+          className="bg-white w-20 rounded-2xl p-2 mx-auto text-red-200"
         />
         <h2 className="font-aber mt-4 text-lg ">{title}</h2>
         <ul className="text-left my-3">
@@ -30,10 +37,10 @@ const CourseCard = ({ title, description, image, link }: CourseCardProps) => {
           ))}
         </ul>
         <Link
-          className="bg-white outline-none text-black p-2 w-[50%] mx-auto my-2 hover:scale-95 transition-transform duration-300"
+          className="bg-white outline-none text-black p-2 min-w-fit w-[50%] mx-auto my-2 hover:scale-95 transition-transform duration-300 "
           href={link}
         >
-          Start
+          {btnText}
         </Link>
       </div>
     </div>

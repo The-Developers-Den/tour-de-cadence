@@ -28,11 +28,11 @@ const CourseHeader = () => {
   const headers: { title: string; link: string }[] = [
     {
       title: "About us",
-      link: "#speakers",
+      link: "/",
     },
     {
-      title: "Sponsors",
-      link: "#sponsors",
+      title: "Ask a Question",
+      link: "/",
     },
   ];
   return (
