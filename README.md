@@ -1,38 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tour de Cadence
+![hackathon-banner](https://flow-hackathon-s2.devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2F633065500193427091033d2cfc2621e6%2Fassets%2Fcover%2F94.jpeg&w=1440&q=100)
 
-## Getting Started
+## About
 
-First, run the development server:
+### Participants
+
+| Name            | Github                                         | Discord         |
+| --------------- | ---------------------------------------------- | --------------- |
+| Pratham Singhal | [@Pratham-19](https://github.com/Pratham-19)   | Pratham#7898    |
+
+
+### Description
+## The problem Tour De Cadence solves
+
+Tour de Cadence addresses the lack of engaging and comprehensive learning resources for the Cadence programming language, which is required for creating smart contracts on the Flow blockchain. Existing materials are frequently dry, discouraging newcomers from exploring Flow's potential. Tour de Cadence provides an interactive platform with structured content, quizzes, and dynamic updates to help developers master Cadence and embrace the opportunities of the Flow ecosystem.
+
+### Preview
+
+
+
+https://www.loom.com/share/7cfebe5632c14d4f82939138acdc66f9
+
+
+
+
+## Set up Project
+Here's how to setup and run the project locally :
+
+### Prerequisites
+
+Here are some pre-requisites that you may require to run the project on your system.
+
+- Flow (https://developers.flow.com/).
+- NextJs (https://nextjs.org/).
+
+### Install Project
+
+Done with the pre-requisites?
+
+Here are the steps to be taken after that :
+
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/The-Developers-Den/tour-de-cadence.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Change directory :
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+cd tour-de-cadence
+```
+3. Install dependencies :
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm install
+  or
+yarn install
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Run 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run start
+  or
+yarn run
+````
