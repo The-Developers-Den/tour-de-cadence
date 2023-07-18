@@ -55,7 +55,7 @@ const courses = () => {
         },
       ],
       image: "/link.png",
-      link: "/courses",
+      link: "/lessons/cadence-contracts/1",
     },
   ];
   const projects: {

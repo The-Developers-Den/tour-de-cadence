@@ -3,19 +3,26 @@ import React, { useState } from "react";
 import LessonHeader from "@/components/LessonHeader";
 import LessonHeading from "@/components/LessonHeading";
 import LessonQuiz from "@/components/LessonQuiz";
+import Code from "@/components/Code";
 import Link from "next/link";
 
 const syntax = () => {
   const [code, setCode] = useState(`
 
-  // Attempt the quiz here
-  //
-  // click on Show Answer to see the answers
+// use @ to refer a User resource
 
-  
   `);
   const ans = `
-  // Your'e all set Lets Go !!
+resource User {
+    let id: Int
+    var name: String
+    // Additional user properties...
+}
+
+pub fun updateUserName(user: @User, newName: String): @User {
+    user.name = newName
+    return <-user
+}
   `;
 
   const handleChange = (_editor: unknown, data: unknown, value: string) => {
@@ -29,7 +36,7 @@ const syntax = () => {
     {
       title: "Lesson Overview",
       link: "/lessons/cadence-contracts/1",
-      isActive: true,
+      isActive: false,
     },
     {
       title: "Building a Contract",
@@ -54,7 +61,7 @@ const syntax = () => {
     {
       title: "Contract Mastery: Imp Operators",
       link: "/lessons/cadence-contracts/6",
-      isActive: false,
+      isActive: true,
     },
     {
       title: "Contract Mastery: NFT Badge",
@@ -72,58 +79,42 @@ const syntax = () => {
 
           <section className="font-raleway leading-8">
             <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              Welcome
+              1. & (ampersand)
             </h2>
             <h3>
-              In this tutorial, we will learn about the developing smart
-              contracts in Cadence.{" "}
+              If an expression starts with the & (ampersand) symbol, it creates
+              a reference.
             </h3>
+            <Code>
+              <h3>{`let a: String = "hello"`}</h3>
+              <h3>{`let refOfA: &String = &a as &String`}</h3>
+            </Code>
             <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              What are Smart Contracts?
+              2. @ (at)
             </h2>
             <h3>
-              A contract in Cadence is a collection of type definitions of
-              interfaces, structs, resources, data (its state), and code (its
-              functions) that lives in the contract storage area of an account
-              in Flow. Contracts are where all composite types like structs,
-              resources, events, and interfaces for these types in Cadence have
-              to be defined. Therefore, an object of one of these types cannot
-              exist without having been defined in a deployed Cadence contract.
+              The @ (at) symbol before a type is used to annotate whether the
+              type is a resource.
             </h3>
-            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              How to use this tutorial ?
-            </h2>
+
+            <Code>
+              <h3>{`pub resource SomeResource {`}</h3>
+              <h3>{`    pub var value: Int`}</h3>
+              <h3>{`    init(value: Int) {`}</h3>
+              <h3>{`        self.value = value`}</h3>
+              <h3>{`    }`}</h3>
+              <h3>{`}`}</h3>
+              <h3>{`let a: @SomeResource <- create SomeResource(value: 0)`}</h3>
+            </Code>
+
             <h3>
-              This tutorial is designed to be interactive. You will be presented
-              with a series of lessons, each of which will introduce you to a
-              new concept in Cadence. You can know more about Cadence from{" "}
+              More operators can be accessed from{" "}
               <Link
-                href={"https://developers.flow.com/cadence/intro"}
-                target="blank"
-                className="text-blue-500 cursor-pointer"
+                href={"/lessons/intro-to-cadence/8"}
+                className="text-blue-400"
               >
                 here
               </Link>
-            </h3>
-
-            <h3>
-              Each lesson will include a short explanation of the concept,
-              followed by a quiz. The quiz will present you with a series of
-              questions about the concept. You will be able to answer the
-              questions by writing Cadence code in the editor on the right side
-              of the screen.
-            </h3>
-            <h3>
-              You can also try{" "}
-              <Link
-                href={"https://play.flow.com/"}
-                target="blank"
-                className="text-blue-500 cursor-pointer"
-              >
-                Flow Playground
-              </Link>{" "}
-              to write and test your code. After completion of the course you
-              will be awarded with a NFT.
             </h3>
           </section>
         </section>

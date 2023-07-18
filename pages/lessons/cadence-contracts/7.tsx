@@ -10,33 +10,37 @@ const syntax = () => {
   }[] = [
     {
       title: "Lesson Overview",
-      link: "/lessons/cadence-oops/1",
-      isActive: false,
-    },
-
-    {
-      title: "Cadence OOPs Mastery: Access Control",
-      link: "/lessons/cadence-oops/2",
+      link: "/lessons/cadence-contracts/1",
       isActive: false,
     },
     {
-      title: "Cadence OOPs Mastery: Interface",
-      link: "/lessons/cadence-oops/3",
+      title: "Building a Contract",
+      link: "/lessons/cadence-contracts/2",
       isActive: false,
     },
     {
-      title: "Cadence OOPs Mastery: Enumerations",
-      link: "/lessons/cadence-oops/4",
+      title: "Contract Mastery: Events",
+      link: "/lessons/cadence-contracts/3",
       isActive: false,
     },
     {
-      title: "Cadence OOPs Mastery: References",
-      link: "/lessons/cadence-oops/5",
+      title: "Contract Mastery: Transactions",
+      link: "/lessons/cadence-contracts/4",
       isActive: false,
     },
     {
-      title: "Cadence Contract: NFT Badge",
-      link: "/lessons/cadence-oops/6",
+      title: "Contract Mastery: Built-in Functions",
+      link: "/lessons/cadence-contracts/5",
+      isActive: false,
+    },
+    {
+      title: "Contract Mastery: Imp Operators",
+      link: "/lessons/cadence-contracts/6",
+      isActive: false,
+    },
+    {
+      title: "Contract Mastery: NFT Badge",
+      link: "/lessons/cadence-contracts/7",
       isActive: true,
     },
   ];

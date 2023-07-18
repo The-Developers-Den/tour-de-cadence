@@ -3,19 +3,24 @@ import React, { useState } from "react";
 import LessonHeader from "@/components/LessonHeader";
 import LessonHeading from "@/components/LessonHeading";
 import LessonQuiz from "@/components/LessonQuiz";
-import Link from "next/link";
+import Code from "@/components/Code";
 
 const syntax = () => {
   const [code, setCode] = useState(`
 
-  // Attempt the quiz here
-  //
-  // click on Show Answer to see the answers
+// use panic to terminate the program
+// if the voting age is less than 18
 
-  
   `);
   const ans = `
-  // Your'e all set Lets Go !!
+pub fun checkVotingAge(age: Int): Int {
+    if age < 18 {
+        panic("Voting age must be 18 or older.")
+    }
+
+    // If the age is 18 or older, continue with the rest of the code.
+    return age
+}
   `;
 
   const handleChange = (_editor: unknown, data: unknown, value: string) => {
@@ -29,7 +34,7 @@ const syntax = () => {
     {
       title: "Lesson Overview",
       link: "/lessons/cadence-contracts/1",
-      isActive: true,
+      isActive: false,
     },
     {
       title: "Building a Contract",
@@ -49,7 +54,7 @@ const syntax = () => {
     {
       title: "Contract Mastery: Built-in Functions",
       link: "/lessons/cadence-contracts/5",
-      isActive: false,
+      isActive: true,
     },
     {
       title: "Contract Mastery: Imp Operators",
@@ -72,59 +77,61 @@ const syntax = () => {
 
           <section className="font-raleway leading-8">
             <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              Welcome
+              panic
             </h2>
             <h3>
-              In this tutorial, we will learn about the developing smart
-              contracts in Cadence.{" "}
-            </h3>
-            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              What are Smart Contracts?
-            </h2>
-            <h3>
-              A contract in Cadence is a collection of type definitions of
-              interfaces, structs, resources, data (its state), and code (its
-              functions) that lives in the contract storage area of an account
-              in Flow. Contracts are where all composite types like structs,
-              resources, events, and interfaces for these types in Cadence have
-              to be defined. Therefore, an object of one of these types cannot
-              exist without having been defined in a deployed Cadence contract.
-            </h3>
-            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
-              How to use this tutorial ?
-            </h2>
-            <h3>
-              This tutorial is designed to be interactive. You will be presented
-              with a series of lessons, each of which will introduce you to a
-              new concept in Cadence. You can know more about Cadence from{" "}
-              <Link
-                href={"https://developers.flow.com/cadence/intro"}
-                target="blank"
-                className="text-blue-500 cursor-pointer"
-              >
-                here
-              </Link>
+              Terminates the program unconditionally and reports a message which
+              explains why the unrecoverable error occurred.
             </h3>
 
+            <Code>
+              <h3>{`let optionalAccount: AuthAccount? = // ...`}</h3>
+              <h3>{`let account = optionalAccount ?? panic("missing account")`}</h3>
+            </Code>
+
+            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
+              assert
+            </h2>
+
             <h3>
-              Each lesson will include a short explanation of the concept,
-              followed by a quiz. The quiz will present you with a series of
-              questions about the concept. You will be able to answer the
-              questions by writing Cadence code in the editor on the right side
-              of the screen.
+              Terminates the program if the given condition is false, and
+              reports a message which explains how the condition is false. Use
+              this function for internal sanity checks.
             </h3>
+
+            <Code>
+              <h3>{`fun assert(_ condition: Bool, message: String)`}</h3>
+            </Code>
+            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
+              RLP (Recursive Length Prefix)
+            </h2>
+
             <h3>
-              You can also try{" "}
-              <Link
-                href={"https://play.flow.com/"}
-                target="blank"
-                className="text-blue-500 cursor-pointer"
-              >
-                Flow Playground
-              </Link>{" "}
-              to write and test your code. After completion of the course you
-              will be awarded with a NFT.
+              RLP (Recursive Length Prefix) serialization allows the encoding of
+              arbitrarily nested arrays of binary data. Cadence provides RLP
+              decoding functions in the built-in RLP contract, which does not
+              need to be imported.
             </h3>
+
+            <Code>
+              <h3>{`fun decodeString(_ input: [UInt8]): [UInt8]`}</h3>
+            </Code>
+            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
+              unsafeRandom
+            </h2>
+
+            <h3>Returns a pseudo-random number.</h3>
+            <h3>
+              This limitation is inherent to any smart contract platform that
+              allows transactions to roll back atomically and cannot be solved
+              through safe randomness alone. Providing additional Cadence
+              language primitives to simplify this challenge for developers is
+              on our roadmap as well.
+            </h3>
+
+            <Code>
+              <h3>{`fun unsafeRandom(): UInt64`}</h3>
+            </Code>
           </section>
         </section>
 
