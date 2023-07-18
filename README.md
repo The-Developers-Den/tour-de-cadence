@@ -1,4 +1,4 @@
-# Huddlerr
+# Tour de Cadence
 ![hackathon-banner](https://flow-hackathon-s2.devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2F633065500193427091033d2cfc2621e6%2Fassets%2Fcover%2F94.jpeg&w=1440&q=100)
 
 ## About
@@ -12,7 +12,9 @@
 
 ### Description
 ## The problem Tour De Cadence solves
-Huddlerr is an FVM-based social media platform that uses Filecoin storage. It provides an interface through which users can post random items and organise meetings to discuss anything (discussion, random music discussion). On the platform, they can also create token-gated/members-only workshops. Overall, it completes the task of building the primitives of a web3 social graph on FVM, using Filecoin storage to save all posts and user metrics, and empowering people to communicate using the Huddle01 SDK.
+
+Tour de Cadence addresses the lack of engaging and comprehensive learning resources for the Cadence programming language, which is required for creating smart contracts on the Flow blockchain. Existing materials are frequently dry, discouraging newcomers from exploring Flow's potential. Tour de Cadence provides an interactive platform with structured content, quizzes, and dynamic updates to help developers master Cadence and embrace the opportunities of the Flow ecosystem.
+
 ### Preview
 
 
@@ -29,8 +31,8 @@ Here's how to setup and run the project locally :
 
 Here are some pre-requisites that you may require to run the project on your system.
 
-- Node (https://node.org/).
-- ReactJs (https://reactjs.org/).
+- Flow (https://developers.flow.com/).
+- NextJs (https://nextjs.org/).
 
 ### Install Project
 
@@ -42,14 +44,13 @@ Here are the steps to be taken after that :
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/The-Developers-Den/huddlerrgit
+git clone https://github.com/The-Developers-Den/tour-de-cadence.git
 ```
 
 2. Change directory :
 
 ```bash
-cd huddlerr
-cd frontend
+cd tour-de-cadence
 ```
 3. Install dependencies :
 
