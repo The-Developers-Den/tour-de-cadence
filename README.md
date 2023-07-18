@@ -19,7 +19,7 @@ Tour de Cadence addresses the lack of engaging and comprehensive learning resour
 
 
 
-https://www.loom.com/share/7cfebe5632c14d4f82939138acdc66f9
+https://www.loom.com/share/0021e21fbcea46bfac6075303bc0a919?sid=b3475e17-d909-4568-827a-27746bee3a5a
 
 
 
