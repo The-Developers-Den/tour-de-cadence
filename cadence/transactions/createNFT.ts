@@ -6,7 +6,7 @@ transaction (url: String){
 
   prepare(acct: AuthAccount) {
   
-    acct.save(<-TourDeCadence.createNFT(url: url), to: /storage/TourDeCadencePath)
+    acct.save(<-TourDeCadence.createNFT(url: url), to: /storage/TourDeCadencePath})
     acct.link<&TourDeCadence.NFT{TourDeCadence.NFTPublic}>(/public/TourDeCadencePath, target: /storage/TourDeCadencePath)
   
   }

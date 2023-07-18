@@ -39,7 +39,7 @@ const courses = () => {
         },
       ],
       image: "/computer.png",
-      link: "/courses",
+      link: "/lessons/cadence-oops/1",
     },
     {
       title: "Cadence: Smart Contract Wizardry",
