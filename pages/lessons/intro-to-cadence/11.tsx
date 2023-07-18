@@ -92,6 +92,11 @@ const syntax = () => {
       link: "/lessons/intro-to-cadence/11",
       isActive: true,
     },
+    {
+      title: "Course Completion NFT",
+      link: "/lessons/intro-to-cadence/12",
+      isActive: false,
+    },
   ];
 
   return (

@@ -29,13 +29,13 @@ const courses = () => {
       title: "Cadence OOP Mastery",
       description: [
         {
-          info: "Scope of Cadence",
+          info: "Oops Concepts",
         },
         {
-          info: "Variables",
+          info: "Made Easy",
         },
         {
-          info: "Expressions",
+          info: "Quiz & much more",
         },
       ],
       image: "/computer.png",
@@ -45,13 +45,13 @@ const courses = () => {
       title: "Cadence: Smart Contract Wizardry",
       description: [
         {
-          info: "Scope of Cadence",
+          info: "Contract Creation",
         },
         {
-          info: "Variables",
+          info: "Functions",
         },
         {
-          info: "Expressions",
+          info: "Quiz & much more",
         },
       ],
       image: "/link.png",
@@ -68,13 +68,13 @@ const courses = () => {
       title: "Hello World",
       description: [
         {
-          info: "Scope of Cadence",
+          info: "Flow's First Contract: Fundamental Start",
         },
         {
-          info: "Variables",
+          info: "Cadence Basics: Contract Creation",
         },
         {
-          info: "Expressions",
+          info: "Start with Flow: First Contract",
         },
       ],
       image: "/hello-world.png",
@@ -84,13 +84,13 @@ const courses = () => {
       title: "NFT Marketplace",
       description: [
         {
-          info: "Scope of Cadence",
+          info: "Build Marketplace: Cadence Tutorial",
         },
         {
-          info: "Variables",
+          info: "Cadence Fundamentals: Marketplace Creation",
         },
         {
-          info: "Expressions",
+          info: "Marketplace Made Easy",
         },
       ],
       image: "/card.png",
@@ -100,13 +100,13 @@ const courses = () => {
       title: "Voting Contract",
       description: [
         {
-          info: "Scope of Cadence",
+          info: "Decentralized Voting with Cadence",
         },
         {
-          info: "Variables",
+          info: "Cadence Fundamentals: On-Chain Voting",
         },
         {
-          info: "Expressions",
+          info: "Blockchain Voting Made Easy",
         },
       ],
       image: "/ballot.png",

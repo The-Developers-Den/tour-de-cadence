@@ -156,6 +156,11 @@ while i < 10 {
       link: "/lessons/intro-to-cadence/11",
       isActive: false,
     },
+    {
+      title: "Course Completion NFT",
+      link: "/lessons/intro-to-cadence/12",
+      isActive: false,
+    },
   ];
 
   return (

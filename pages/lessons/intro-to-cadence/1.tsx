@@ -1,35 +1,22 @@
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Lessons from "@/util/lesson.config";
-import CodeDifference from "@/components/Test";
 import React, { useState } from "react";
-
-import EditableCodeBlock from "@/components/CodeBlock";
 import LessonHeader from "@/components/LessonHeader";
 import LessonHeading from "@/components/LessonHeading";
+import LessonQuiz from "@/components/LessonQuiz";
+import Link from "next/link";
 
 const syntax = () => {
-  const userCode = "const a =10; print(a+b)";
-  const answerCode = "const a =10; print(a)";
   const [code, setCode] = useState(`
-// HelloWorld.cdc
-pub contract HelloWorld {
 
-    // Declare a public field of type String.
-    // All fields must be initialized in the init() function.
-    pub let greeting: String
+  // Attempt the quiz here
+  //
+  // and click on Show Answer to see the answers
 
-    // The init() function is required if the contract contains any fields.
-    init() {
-        self.greeting = "Hello, World!"
-    }
-
-    // Public function that returns our friendly greeting!
-    pub fun hello(): String {
-        return self.greeting
-    }
-}
+  
   `);
+  const ans = `
+  // Your'e all set Lets Go !!
+  `;
 
   const handleChange = (_editor: unknown, data: unknown, value: string) => {
     setCode(value);
@@ -45,7 +32,7 @@ pub contract HelloWorld {
       isActive: true,
     },
     {
-      title: "Intro To Smart Contract",
+      title: "Cadence Syntax: Comments & Naming Convention",
       link: "/lessons/intro-to-cadence/2",
       isActive: false,
     },
@@ -60,28 +47,44 @@ pub contract HelloWorld {
       isActive: false,
     },
     {
-      title: "Cadence Types: Exploring Data Structures",
+      title: "Cadence Data Strucuture: Integer Deep Dive",
       link: "/lessons/intro-to-cadence/5",
       isActive: false,
     },
     {
-      title: "Operator's Odyssey: Mastering Operators in Cadence",
+      title: "Cadence Data Strucuture: Array Deep Dive",
       link: "/lessons/intro-to-cadence/6",
       isActive: false,
     },
     {
-      title: "Flow Control Mastery: Navigating Control Structures ",
+      title: "Cadence Data Strucuture: Dictionary Deep Dive",
       link: "/lessons/intro-to-cadence/7",
       isActive: false,
     },
+
     {
-      title: "Flow Control Mastery: Navigating Control Structures ",
+      title: "Operator's Odyssey: Mastering Operators in Cadence",
       link: "/lessons/intro-to-cadence/8",
       isActive: false,
     },
     {
       title: "Flow Control Mastery: Navigating Control Structures ",
-      link: "/lessons/intro-to-cadence/8",
+      link: "/lessons/intro-to-cadence/9",
+      isActive: false,
+    },
+    {
+      title: "Cadence Mastery: Functions & Scope ",
+      link: "/lessons/intro-to-cadence/10",
+      isActive: false,
+    },
+    {
+      title: "Cadence Mastery: Import Keyword ",
+      link: "/lessons/intro-to-cadence/11",
+      isActive: false,
+    },
+    {
+      title: "Course Completion NFT",
+      link: "/lessons/intro-to-cadence/12",
       isActive: false,
     },
   ];
@@ -93,45 +96,66 @@ pub contract HelloWorld {
         <section className="basis-[52%] overflow-y-scroll">
           <LessonHeading links={links} />
 
-          <h2 className="text-xl font-bold font-aber_bold my-2">Comments</h2>
-          <h3 className="text-lg font-raleway my-2">
-            Comments can be used to document code. A comment is text that is not
-            executed.
-            <i>Single-line</i>
-            comments start with two slashes (//). These comments can go on a
-            line by themselves or they can go directly after a line of code.
-          </h3>
+          <section className="font-raleway leading-8">
+            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
+              Welcome
+            </h2>
+            <h3>
+              In this tutorial, we will learn about the basics of Cadence.{" "}
+            </h3>
+            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
+              What is Cadence ?
+            </h2>
+            <h3>
+              Cadence is a new smart contract programming language for use on
+              the Flow Blockchain. Cadence introduces new features to smart
+              contract programming that help developers ensure that their code
+              is safe, secure, clear, and approachable.
+            </h3>
+            <h2 className="text-xl font-bold font-aber_bold my-2 mt-3">
+              How to use this tutorial ?
+            </h2>
+            <h3>
+              This tutorial is designed to be interactive. You will be presented
+              with a series of lessons, each of which will introduce you to a
+              new concept in Cadence. You can know more about Cadence from{" "}
+              <Link
+                href={"https://developers.flow.com/cadence/intro"}
+                target="blank"
+                className="text-blue-500 cursor-pointer"
+              >
+                here
+              </Link>
+            </h3>
 
-          <SyntaxHighlighter
-            language="javascript"
-            style={dracula}
-            wrapLongLines
-          >
-            a+b =10
-          </SyntaxHighlighter>
+            <h3>
+              Each lesson will include a short explanation of the concept,
+              followed by a quiz. The quiz will present you with a series of
+              questions about the concept. You will be able to answer the
+              questions by writing Cadence code in the editor on the right side
+              of the screen.
+            </h3>
+            <h3>
+              You can also try{" "}
+              <Link
+                href={"https://play.flow.com/"}
+                target="blank"
+                className="text-blue-500 cursor-pointer"
+              >
+                Flow Playground
+              </Link>{" "}
+              to write and test your code. After completion of the course you
+              will be awarded with a NFT.
+            </h3>
+          </section>
         </section>
 
-        <section className="basis-[47%] flex flex-col">
-          <section className="basis-[76%]">
-            <EditableCodeBlock code={code} handleCodeChange={handleChange} />
-          </section>
-          <section className="flex">
-            <button
-              onClick={() => {
-                console.log(code);
-              }}
-            >
-              Show Answer
-            </button>
-            <button
-              onClick={() => {
-                console.log(code);
-              }}
-            >
-              Check
-            </button>
-          </section>
-          <CodeDifference userCode={userCode} answerCode={answerCode} />
+        <section className="basis-[47%] overflow-y-scroll">
+          <LessonQuiz
+            ansCode={ans}
+            handleQuizChange={handleChange}
+            quizCode={code}
+          />
         </section>
       </div>
     </Lessons>
