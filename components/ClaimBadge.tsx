@@ -8,7 +8,8 @@ import toast, { Toaster } from "react-hot-toast";
 fcl.config({
   "accessNode.api": "https://rest-testnet.onflow.org",
   "discovery.wallet": "https://fcl-discovery.onflow.org/testnet/authn",
-  "app.detail.title": "My Flow NFT DApp",
+  "app.detail.title": "Tour De Cadence",
+  "app.detail.icon": "https://tour-de-cadence.vercel.app/favicon.ico",
 });
 
 type ClaimBadgeProps = {
